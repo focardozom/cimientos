@@ -14,7 +14,7 @@ const Footer = () => {
               <span className="font-bold text-lg">CIMIENTOS</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Colectivo de Investigación Multidisciplinar sobre Innovación en Niñez y Transformación Social
+              Colectivo de investigación multidisciplinar sobre innovación en niñez y transformación social
             </p>
           </div>
 

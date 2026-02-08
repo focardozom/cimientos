@@ -25,7 +25,7 @@ export default function PublicationsPage() {
               Publicaciones
             </h1>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Accede a nuestras investigaciones, policy briefs y documentos de posicionamiento
+              Accede a nuestras investigaciones, notas de política pública y documentos de posicionamiento
             </p>
           </div>
         </div>
