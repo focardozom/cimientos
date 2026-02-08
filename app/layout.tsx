@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'CIMIENTOS - Colectivo de Investigación Multidisciplinar',
+  title: 'CIMIENTOS - Colectivo de investigación multidisciplinar',
   description: 'Investigación sobre primera infancia en Colombia y Latinoamérica con enfoque en innovación, equidad y transformación social',
   keywords: 'primera infancia, investigación, Colombia, Latinoamérica, políticas públicas, equidad, transformación social',
 }

@@ -4,7 +4,7 @@ export default function AboutPage() {
   const objectives = [
     {
       icon: Users,
-      title: "Visibilizar investigadores",
+      title: "Visibilizar Investigadores/as",
       description: "Amplificar la producción de conocimiento de una nueva generación de investigadoras/es."
     },
     {
@@ -55,11 +55,11 @@ export default function AboutPage() {
                 <div className="w-12 h-12 bg-cimientos-100 rounded-lg flex items-center justify-center">
                   <Target className="w-6 h-6 text-cimientos-600" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900">Nuestra Misión</h2>
+                <h2 className="text-3xl font-bold text-gray-900">Nuestra misión</h2>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed">
                 Visibilizar la investigación sobre la primera infancia en Colombia desde un enfoque multidisciplinario, 
-                contribuyendo, desde la evidencia, a la equidad y a la transformación de políticas y programas.
+                contribuyendo, desde la evidencia, a la equidad y a la transformación de programas y políticas públicas.
               </p>
             </div>
             <div className="relative">
@@ -101,7 +101,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Objetivos Específicos
+              Objetivos específicos
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Nuestros compromisos para generar impacto real en la primera infancia
@@ -137,7 +137,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center">
                 <Eye className="w-6 h-6 text-primary-600" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900">Visión a Futuro</h2>
+              <h2 className="text-3xl font-bold text-gray-900">Visión a futuro</h2>
             </div>
             
             <div className="bg-gradient-to-r from-cimientos-50 via-primary-50 to-accent-50 rounded-2xl p-8 md:p-12 shadow-lg">
@@ -159,7 +159,7 @@ export default function AboutPage() {
                   <div className="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-3">
                     <Users className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Práctica</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">Implementación</h3>
                   <p className="text-sm text-gray-600">Aplicación directa en programas y servicios</p>
                 </div>
                 
@@ -181,7 +181,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Nuestro Alcance
+              Nuestro alcance
             </h2>
             <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto">
               Trabajamos con un enfoque regional, conectando investigadores y experiencias 

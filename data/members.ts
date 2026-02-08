@@ -4,10 +4,10 @@ export const members: Member[] = [
   {
     id: '1',
     name: 'Ana María Restrepo-Sáenz',
-    role: 'Investigadora',
+    role: 'Estudiante de Maestría / Investigadora',
     affiliation: 'University of Oxford',
     location: 'Oxford, Inglaterra',
-    interests: ['Crisis humanitarias', 'Migración forzada', 'Crianza - responsive caregiving', 'Bienestar cuidadores', 'Primeros 1,000 días'],
+    interests: ['Crisis humanitarias', 'Migración forzada', 'Crianza', 'Bienestar cuidadores', 'Primeros 1,000 días'],
     bio: 'Investigadora en crisis humanitarias, migración forzada y bienestar de cuidadores.',
     imageUrl: '/members/ana-restrepo.jpg',
     email: 'ana.restreposaenz@spi.ox.ac.uk',
@@ -64,7 +64,7 @@ export const members: Member[] = [
     affiliation: 'NYU',
     location: 'NY, Estados Unidos',
     interests: ['Desarrollo infantil', 'Prevención de violencia', 'Crianza', 'Políticas públicas', 'Implementación', 'Métodos mixtos'],
-    bio: 'Estudiante de PhD en NYU con interés en desarrollo infantil y prevención de violencia.',
+    bio: 'Estudiante de PhD en New York University con interés en desarrollo infantil y prevención de violencia.',
     imageUrl: '/members/juliana-borbon.jpg',
     email: 'jb9177@nyu.edu'
   },
@@ -94,7 +94,7 @@ export const members: Member[] = [
   {
     id: '9',
     name: 'Tatiana Plata Caviedes',
-    role: 'Investigadora',
+    role: 'Profesora / Investigadora',
     affiliation: 'Universidad Nacional de Colombia',
     location: 'Bogotá, Colombia',
     interests: ['Autorregulación', 'Educación inicial', 'Manejo del aula', 'Manejo comportamientos desafiantes', 'Salud mental educadores', 'Formación docentes'],

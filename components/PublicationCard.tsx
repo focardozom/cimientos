@@ -23,7 +23,7 @@ const PublicationCard = ({ publication }: PublicationCardProps) => {
     switch (type) {
       case 'policy-brief':
         return {
-          label: 'Policy Brief',
+          label: 'Nota de Política Pública',
           icon: FileText,
           bgColor: 'bg-cimientos-100',
           textColor: 'text-cimientos-700',
