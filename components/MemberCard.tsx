@@ -29,11 +29,11 @@ const MemberCard = ({ member }: MemberCardProps) => {
             <img
               src={member.imageUrl}
               alt={member.name}
-              className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg"
+              className="w-36 h-36 rounded-full object-cover border-4 border-white shadow-lg"
             />
           ) : (
-            <div className="w-24 h-24 rounded-full bg-gradient-to-br from-cimientos-400 to-primary-500 flex items-center justify-center border-4 border-white shadow-lg">
-              <span className="text-white font-bold text-2xl">
+            <div className="w-36 h-36 rounded-full bg-gradient-to-br from-cimientos-400 to-primary-500 flex items-center justify-center border-4 border-white shadow-lg">
+              <span className="text-white font-bold text-4xl">
                 {member.name.split(' ').map(n => n[0]).join('').substring(0, 2)}
               </span>
             </div>

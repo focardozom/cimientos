@@ -11,11 +11,11 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
                 <span className="block">Transformando</span>
-                <span className="block text-cimientos-600">la Primera</span>
-                <span className="block text-primary-500">Infancia</span>
+                <span className="block text-cimientos-600">la primera</span>
+                <span className="block text-primary-500">infancia</span>
               </h1>
               <p className="text-xl text-gray-700 leading-relaxed max-w-xl">
-                Somos un colectivo de investigación multidisciplinar dedicado a la innovación en niñez y transformación social en Colombia y Latinoamérica.
+                Somos un colectivo de investigación multidisciplinar dedicado a la innovación en primera infancia y transformación social en Colombia y Latinoamérica.
               </p>
             </div>
 
@@ -24,14 +24,14 @@ const Hero = () => {
                 href="/about"
                 className="inline-flex items-center px-8 py-4 bg-cimientos-600 text-white font-semibold rounded-lg hover:bg-cimientos-700 transition-colors duration-200 group"
               >
-                Conoce Más
+                Conoce más
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" />
               </Link>
               <Link
                 href="/comunidad"
                 className="inline-flex items-center px-8 py-4 border-2 border-cimientos-600 text-cimientos-600 font-semibold rounded-lg hover:bg-cimientos-50 transition-colors duration-200"
               >
-                Nuestra Comunidad
+                Nuestra comunidad
               </Link>
             </div>
           </div>
@@ -45,7 +45,7 @@ const Hero = () => {
                   <Users className="w-6 h-6 text-accent-600" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">Red</h3>
-                <p className="text-gray-600 text-sm">Multidisciplinar de investigadores</p>
+                <p className="text-gray-600 text-sm">Multidisciplinar de investigadores/as</p>
               </div>
 
               <div className="bg-white rounded-2xl p-6 shadow-lg mt-8">

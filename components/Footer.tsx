@@ -24,7 +24,7 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-gray-300">
                 <Mail className="w-4 h-4" />
-                <span className="text-sm">contacto@cimientos.org</span>
+                <span className="text-sm">colectivocimientos@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-300">
                 <MapPin className="w-4 h-4" />
@@ -35,7 +35,7 @@ const Footer = () => {
 
           {/* Mission */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Nuestra Misión</h3>
+            <h3 className="font-semibold text-lg">Nuestra misión</h3>
             <p className="text-gray-300 text-sm leading-relaxed">
               Visibilizar la investigación sobre primera infancia desde un enfoque multidisciplinario, contribuyendo a la equidad y transformación social.
             </p>
@@ -49,7 +49,7 @@ const Footer = () => {
             <span>para la primera infancia</span>
           </p>
           <p className="text-gray-500 text-xs mt-2">
-            © 2024 CIMIENTOS. Todos los derechos reservados.
+            © 2026 CIMIENTOS.
           </p>
         </div>
       </div>

@@ -1,6 +1,6 @@
 # CIMIENTOS - Sitio Web
 
-Sitio web oficial del Colectivo de Investigación Multidisciplinar sobre Innovación en Niñez y Transformación Social.
+Sitio web oficial del Colectivo de investigación multidisciplinar sobre innovación en niñez y transformación Social.
 
 ## 🌟 Características
 

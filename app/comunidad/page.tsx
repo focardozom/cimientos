@@ -4,7 +4,7 @@ import { members } from '@/data/members'
 
 export default function CommunityPage() {
   const stats = [
-    { icon: Users, label: 'Investigadores', value: `${members.length}+` },
+    { icon: Users, label: 'Investigadoras/es', value: `${members.length}+` },
     { icon: Globe, label: 'Países', value: '4' },
     { icon: Heart, label: 'Instituciones', value: '12+' }
   ]
@@ -19,7 +19,7 @@ export default function CommunityPage() {
               Nuestra <span className="text-cimientos-600">Comunidad</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-12">
-              Una red multidisciplinar de investigadores comprometidos con la transformación 
+              Una red multidisciplinar de investigadores/as comprometidos/as con la transformación 
               de la primera infancia en Colombia y Latinoamérica
             </p>
 
@@ -44,9 +44,9 @@ export default function CommunityPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">Miembros de la Red</h2>
+              <h2 className="text-2xl font-bold text-gray-900">Miembros de la red</h2>
               <p className="text-gray-600 mt-1">
-                Conoce a los investigadores que forman parte de CIMIENTOS
+                Conoce a quienes forman parte de CIMIENTOS
               </p>
             </div>
             
@@ -79,7 +79,7 @@ export default function CommunityPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              ¿Quieres unirte a nuestra red?
+              ¿Quieres unirte a nuestro colectivo?
             </h2>
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
               Si eres investigador/a en primera infancia y compartes nuestros valores de equidad, 
@@ -90,8 +90,9 @@ export default function CommunityPage() {
               <div className="text-left">
                 <h3 className="font-semibold text-gray-900 mb-2">Requisitos:</h3>
                 <ul className="text-gray-700 space-y-1 text-sm">
-                  <li>• Formación en disciplinas relacionadas con primera infancia</li>
-                  <li>• Experiencia en investigación aplicada</li>
+                  <li>• Formación, investigación o trabajo con políticas públicas, programas o prácticas basadas en la evidencia en disciplinas relacionadas con la primera infancia en Colombia</li>
+                  <li>• Estar en etapas iniciales o medias de tu trayectoria profesional o investigativa, con menos de 25 años de experiencia</li>
+                  <li>• Participación con asistencia mensual a las reuniones del Colectivo, aportando de manera activa a los proyectos, productos y a la consolidación de la red</li>
                   <li>• Compromiso con la equidad y justicia social</li>
                   <li>• Interés en trabajo colaborativo e interdisciplinario</li>
                 </ul>
@@ -103,7 +104,10 @@ export default function CommunityPage() {
                   <li>• Acceso a red colaborativa regional</li>
                   <li>• Oportunidades de publicación conjunta</li>
                   <li>• Participación en eventos y encuentros</li>
-                  <li>• Visibilización de tu investigación</li>
+                  <li>• Retroalimentación académica y técnica en etapas tempranas de investigación y escritura</li>
+                  <li>• Posibilidad de co-crear proyectos, propuestas y postulaciones a fondos</li>
+                  <li>• Conexión con actores de política pública, organizaciones, investigadores y tomadores de decisión a nivel nacional e internacional</li>
+                  <li>• Visibilización de tu agenda de investigación</li>
                 </ul>
               </div>
             </div>
@@ -112,7 +116,7 @@ export default function CommunityPage() {
               href="mailto:contacto@cimientos.org?subject=Solicitud de membresía - CIMIENTOS"
               className="inline-flex items-center px-8 py-4 bg-cimientos-600 text-white font-semibold rounded-lg hover:bg-cimientos-700 transition-colors duration-200"
             >
-              Solicitar Membresía
+              Contáctanos
             </a>
           </div>
         </div>

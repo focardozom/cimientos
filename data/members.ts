@@ -4,12 +4,12 @@ export const members: Member[] = [
   {
     id: '1',
     name: 'Ana María Restrepo-Sáenz',
-    role: 'Investigadora',
+    role: 'Estudiante de Maestría / Investigadora',
     affiliation: 'University of Oxford',
     location: 'Oxford, Inglaterra',
-    interests: ['Crisis humanitarias', 'Migración forzada', 'Crianza - responsive caregiving', 'Bienestar cuidadores', 'Primeros 1,000 días'],
+    interests: ['Crisis humanitarias', 'Migración forzada', 'Crianza', 'Bienestar cuidadores', 'Primeros 1,000 días'],
     bio: 'Investigadora en crisis humanitarias, migración forzada y bienestar de cuidadores.',
-    imageUrl: '',
+    imageUrl: '/members/ana-restrepo.jpg',
     email: 'ana.restreposaenz@spi.ox.ac.uk',
     website: 'https://linkedin.com/in/anarestreposaenz'
   },
@@ -21,7 +21,7 @@ export const members: Member[] = [
     location: 'Bogotá, Colombia',
     interests: ['Desarrollo temprano', 'Violencia', 'Cambio climático', 'Prevención', 'Políticas públicas', 'Métodos mixtos'],
     bio: 'Profesor e investigador enfocado en desarrollo temprano y prevención de violencia.',
-    imageUrl: '',
+    imageUrl: '/members/jorge-cuartas.jpg',
     email: 'j.cuartas@nyu.edu'
   },
   {
@@ -32,7 +32,7 @@ export const members: Member[] = [
     location: 'Cambridge, Estados Unidos',
     interests: ['Prevención', 'Crisis humanitaria', 'Crianza', 'Cambio climático', 'Violencia', 'Políticas públicas'],
     bio: 'Estudiante de Maestría en Políticas Públicas con interés en crisis humanitarias y crianza.',
-    imageUrl: '',
+    imageUrl: 'members/camila-alfonso.png',
     email: 'camilaalfonso@hks.harvard.edu'
   },
   {
@@ -43,7 +43,7 @@ export const members: Member[] = [
     location: 'Bogotá, Colombia',
     interests: ['Bienes de consumo', 'Brechas de género', 'Pobreza multidimensional', 'Metacognición', 'Trayectorias educativas', 'Liderazgo educativo'],
     bio: 'Profesor e investigador en Universidad de los Andes, enfocado en brechas de género y pobreza multidimensional.',
-    imageUrl: '',
+    imageUrl: '/members/hans-cabra.png',
     email: 'hw.cabra2017@uniandes.edu.co'
   },
   {
@@ -64,8 +64,8 @@ export const members: Member[] = [
     affiliation: 'NYU',
     location: 'NY, Estados Unidos',
     interests: ['Desarrollo infantil', 'Prevención de violencia', 'Crianza', 'Políticas públicas', 'Implementación', 'Métodos mixtos'],
-    bio: 'Estudiante de PhD en NYU con interés en desarrollo infantil y prevención de violencia.',
-    imageUrl: '',
+    bio: 'Estudiante de PhD en New York University con interés en desarrollo infantil y prevención de violencia.',
+    imageUrl: '/members/juliana-borbon.jpg',
     email: 'jb9177@nyu.edu'
   },
   {
@@ -76,7 +76,7 @@ export const members: Member[] = [
     location: 'Cambridge, Estados Unidos',
     interests: ['Desarrollo de actitudes de conservación ambiental', 'Cambio climático', 'Desarrollo moral'],
     bio: 'Postdoctoral Fellow en Harvard University, investigando actitudes de conservación ambiental.',
-    imageUrl: '',
+    imageUrl: '/members/lizette-pizza.jpg',
     email: 'lpizza@g.harvard.edu'
   },
   {
@@ -87,19 +87,19 @@ export const members: Member[] = [
     location: 'Irvine, Estados Unidos',
     interests: ['Desarrollo en contexto', 'Estresores ambientales', 'Factores de protección', 'Diseños cuasi experimentales'],
     bio: 'Candidato a PhD en Educación investigando desarrollo en contexto y estresores ambientales.',
-    imageUrl: '',
+    imageUrl: '/members/juan-cristancho.jpg',
     email: 'jcristan@uci.edu',
     website: 'http://www.jcristancho.com'
   },
   {
     id: '9',
     name: 'Tatiana Plata Caviedes',
-    role: 'Investigadora',
+    role: 'Profesora / Investigadora',
     affiliation: 'Universidad Nacional de Colombia',
     location: 'Bogotá, Colombia',
     interests: ['Autorregulación', 'Educación inicial', 'Manejo del aula', 'Manejo comportamientos desafiantes', 'Salud mental educadores', 'Formación docentes'],
     bio: 'Investigadora de la Universidad Nacional de Colombia enfocada en autorregulación y educación inicial.',
-    imageUrl: '',
+    imageUrl: '/members/tatiana-plata.jpg',
     email: 'tplatac@unal.edu.co',
     website: 'https://www.instagram.com/cuidarme.en.el.aula?igsh=MTlnZ3llYmRvMTZndA=='
   },
@@ -111,7 +111,7 @@ export const members: Member[] = [
     location: 'Miami, Estados Unidos',
     interests: ['Desarrollo socioemocional', 'Prevención', 'Entornos familiares', 'Entornos comunitarios', 'Factores de riesgo', 'Factores de protección', 'Crianza', 'Intervención basada en evidencia', 'Evaluación de programas', 'Implementación', 'Modelos estadísticos', 'Adaptaciones culturales'],
     bio: 'Experto en evaluación de programas y modelos estadísticos.',
-    imageUrl: '',
+    imageUrl: '/members/francisco-cardozo.JPEG',
     email: 'f.cardozo@figura1.com.co',
     website: 'https://focardozom.github.io/'
   },
@@ -123,7 +123,7 @@ export const members: Member[] = [
     location: 'Londres, Inglaterra',
     interests: ['Cambio Climático', 'Conflicto Armado', 'Escolaridad', 'ML & Evaluación de Impacto'],
     bio: 'Investigador en Oxford y Fundador de AImpact Lab, trabajando en ML y evaluación de impacto.',
-    imageUrl: '',
+    imageUrl: '/members/hernando-grueso.jpeg',
     email: 'hernando@aimpactlab.com',
     website: 'http://www.aimpactlab.com'
   },
@@ -135,7 +135,7 @@ export const members: Member[] = [
     location: 'Santiago, Chile',
     interests: ['Educación inicial', 'Interacciones', 'Prácticas educativas', 'Formación docente', 'Desarrollo temprano'],
     bio: 'Candidata a PhD en Educación con enfoque en interacciones y prácticas educativas.',
-    imageUrl: '',
+    imageUrl: '/members/jimena-rozo.jpg',
     email: 'ljrozo@uc.cl',
     website: 'https://www.linkedin.com/in/jimena-rozo/'
   },
@@ -147,7 +147,7 @@ export const members: Member[] = [
     location: 'Ámsterdam, Países Bajos',
     interests: ['Habilidades socioemocionales', 'Parenting', 'Medición', 'Evaluación de impacto'],
     bio: 'Candidato a PhD en Vrije Universiteit Amsterdam, investigando habilidades socioemocionales y parenting.',
-    imageUrl: '',
+    imageUrl: '/members/santiago-gomez.jpg',
     email: 's.gomez-echeverry@vu.nl'
   },
   {
@@ -158,7 +158,7 @@ export const members: Member[] = [
     location: 'Bogotá, Colombia',
     interests: ['Dllo en primera infancia', 'Enfoque transformador de género', 'Parentalidad', 'Prevención de violencia', 'Métodos cualitativos', 'Cuantitativos y mixtos'],
     bio: 'Investigadora en Fundación Apapacho con enfoque transformador de género y prevención de violencia.',
-    imageUrl: '',
+    imageUrl: '/members/catalina-rey.jpg',
     email: 'catalinareyguerra@gmail.com'
   }
 ]
