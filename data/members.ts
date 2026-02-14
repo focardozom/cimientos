@@ -54,15 +54,15 @@ export const members: Member[] = [
     location: 'Barranquilla, Colombia',
     interests: ['Prácticas de crianza específicas', 'Desarrollo cerebral', 'Cognitivo y socioemocional', 'Caracterización de contextos vulnerables'],
     bio: 'Profesora e investigadora enfocada en prácticas de crianza y desarrollo cerebral en contextos vulnerables.',
-    imageUrl: '',
+    imageUrl: '/members/diana-lopera.png',
     email: 'dianaloperaperez@gmail.com'
   },
   {
     id: '6',
     name: 'Juliana Borbón',
     role: 'Estudiante PhD',
-    affiliation: 'NYU',
-    location: 'NY, Estados Unidos',
+    affiliation: 'New York University',
+    location: 'New York, Estados Unidos',
     interests: ['Desarrollo infantil', 'Prevención de violencia', 'Crianza', 'Políticas públicas', 'Implementación', 'Métodos mixtos'],
     bio: 'Estudiante de PhD en New York University con interés en desarrollo infantil y prevención de violencia.',
     imageUrl: '/members/juliana-borbon.jpg',
