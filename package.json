@@ -13,7 +13,6 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "bibtex-parse-js": "^0.0.24",
     "lucide-react": "^0.293.0",
     "next": "^14.2.32",
     "postcss": "^8",
