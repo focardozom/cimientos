@@ -1,59 +1,110 @@
 import { Publication } from '@/components/PublicationCard'
-// @ts-ignore
-import bibtexParse from 'bibtex-parse-js'
-import fs from 'fs'
-import path from 'path'
 
-export function getPublications(): Publication[] {
-  const bibPath = path.join(process.cwd(), 'data', 'publications.bib')
-  
-  if (!fs.existsSync(bibPath)) {
-    return []
-  }
+const ZOTERO_GROUP_ID = '6116204'
+const ZOTERO_API_BASE = 'https://api.zotero.org'
 
-  const bibContent = fs.readFileSync(bibPath, 'utf8')
-  const parsed = bibtexParse.toJSON(bibContent)
-
-  return parsed.map((entry: any, index: number) => {
-    // Map BibTeX fields to Publication interface
-    const tags: string[] = []
-    if (entry.entryTags.keywords) {
-      tags.push(...entry.entryTags.keywords.split(',').map((k: string) => k.trim()))
-    }
-    
-    // Determine type from keywords or fallback to BibTeX entry type
-    const type = determinePublicationType(entry.entryType, tags)
-    
-    return {
-      id: entry.citationKey || `bib-${index}`,
-      title: entry.entryTags.title || 'Sin título',
-      description: entry.entryTags.abstract || entry.entryTags.note || '',
-      type: type,
-      authors: entry.entryTags.author 
-        ? entry.entryTags.author.split(' and ').map((a: string) => a.trim())
-        : [],
-      date: entry.entryTags.year || '',
-      downloadUrl: entry.entryTags.url || entry.entryTags.doi ? `https://doi.org/${entry.entryTags.doi}` : undefined,
-      externalUrl: entry.entryTags.url,
-      tags: tags
-    }
-  })
+interface ZoteroCreator {
+  creatorType: string
+  firstName: string
+  lastName: string
 }
 
-function determinePublicationType(bibType: string, tags: string[]): 'policy-brief' | 'opinion' | 'research' | 'position' {
-  // First check tags for explicit type overrides
-  const lowerTags = tags.map(t => t.toLowerCase())
+interface ZoteroTag {
+  tag: string
+}
+
+interface ZoteroItem {
+  key: string
+  data: {
+    key: string
+    itemType: string
+    title: string
+    creators: ZoteroCreator[]
+    abstractNote: string
+    date: string
+    DOI: string
+    url: string
+    tags: ZoteroTag[]
+    publicationTitle?: string
+    volume?: string
+    issue?: string
+    pages?: string
+    publisher?: string
+  }
+}
+
+async function fetchAllItems(): Promise<ZoteroItem[]> {
+  const items: ZoteroItem[] = []
+  let start = 0
+  const limit = 100
+
+  while (true) {
+    const url = `${ZOTERO_API_BASE}/groups/${ZOTERO_GROUP_ID}/items?format=json&itemType=-attachment&limit=${limit}&start=${start}&sort=date&direction=desc`
+    const res = await fetch(url, {
+      headers: { 'Zotero-API-Version': '3' },
+      next: { revalidate: 86400 },
+    })
+
+    if (!res.ok) {
+      console.error(`Zotero API error: ${res.status} ${res.statusText}`)
+      break
+    }
+
+    const batch: ZoteroItem[] = await res.json()
+    items.push(...batch)
+
+    const totalResults = parseInt(res.headers.get('Total-Results') || '0', 10)
+    start += limit
+    if (start >= totalResults) break
+  }
+
+  return items
+}
+
+function formatAuthors(creators: ZoteroCreator[]): string[] {
+  return creators
+    .filter((c) => c.creatorType === 'author')
+    .map((c) => `${c.lastName}, ${c.firstName}`)
+}
+
+function determinePublicationType(
+  itemType: string,
+  tags: string[]
+): 'policy-brief' | 'opinion' | 'research' | 'position' {
+  const lowerTags = tags.map((t) => t.toLowerCase())
   if (lowerTags.includes('policy brief') || lowerTags.includes('policy-brief')) return 'policy-brief'
   if (lowerTags.includes('opinion') || lowerTags.includes('op-ed') || lowerTags.includes('columna')) return 'opinion'
   if (lowerTags.includes('position paper') || lowerTags.includes('position')) return 'position'
   if (lowerTags.includes('research') || lowerTags.includes('investigación')) return 'research'
 
-  // Fallback to BibTeX entry types
-  const type = bibType.toLowerCase()
-  if (type === 'techreport') return 'policy-brief'
-  if (type === 'misc') return 'opinion'
-  if (type === 'article' || type === 'inproceedings' || type === 'book' || type === 'phdthesis' || type === 'mastersthesis') return 'research'
-  
-  return 'research' // default
+  const type = itemType.toLowerCase()
+  if (type === 'report') return 'policy-brief'
+  if (type === 'newspaperarticle' || type === 'blogpost' || type === 'magazinearticle') return 'opinion'
+  if (['journalarticle', 'conferencepaper', 'book', 'booksection', 'thesis'].includes(type)) return 'research'
+
+  return 'research'
 }
 
+export async function getPublications(): Promise<Publication[]> {
+  const items = await fetchAllItems()
+
+  return items.map((item) => {
+    const { data } = item
+    const tags = data.tags.map((t) => t.tag)
+    const type = determinePublicationType(data.itemType, tags)
+
+    const externalUrl = data.url || (data.DOI ? `https://doi.org/${data.DOI}` : undefined)
+
+    return {
+      id: data.key,
+      title: data.title || 'Sin título',
+      description: data.abstractNote || '',
+      type,
+      authors: formatAuthors(data.creators),
+      date: data.date || '',
+      downloadUrl: data.DOI ? `https://doi.org/${data.DOI}` : undefined,
+      externalUrl,
+      tags,
+    }
+  })
+}
