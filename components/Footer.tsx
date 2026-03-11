@@ -1,4 +1,5 @@
 import { Heart, Mail, MapPin } from 'lucide-react'
+import Image from 'next/image'
 
 const Footer = () => {
   return (
@@ -8,10 +9,8 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-cimientos-400 to-primary-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">C</span>
-              </div>
-              <span className="font-bold text-lg">CIMIENTOS</span>
+              <Image src="/circular_logo_2.svg" alt="CIMIENTOS" width={32} height={32} />
+              <span className="font-bold text-lg" style={{ fontFamily: "'FreshMango', sans-serif" }}>CIMIENTOS</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
               Colectivo de investigación multidisciplinar sobre innovación en niñez y transformación social

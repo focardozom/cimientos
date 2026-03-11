@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { Menu, X, Users, BookOpen, Info } from 'lucide-react'
 
 const Navbar = () => {
@@ -19,10 +20,8 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-cimientos-400 to-primary-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">C</span>
-              </div>
-              <span className="font-bold text-xl text-gray-900">CIMIENTOS</span>
+              <Image src="/circular_logo_1.svg" alt="CIMIENTOS" width={40} height={40} />
+              <span className="font-bold text-xl" style={{ fontFamily: "'FreshMango', sans-serif", color: '#603813' }}>CIMIENTOS</span>
             </Link>
           </div>
 

@@ -1,10 +1,13 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = localFont({
+  src: '../public/fonts/Montserrat-VariableFont_wght.ttf',
+  variable: '--font-montserrat',
+})
 
 export const metadata: Metadata = {
   title: 'CIMIENTOS - Colectivo de investigación multidisciplinar',
@@ -19,7 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="smooth-scroll">
-      <body className={`${inter.className} min-h-screen flex flex-col`}>
+      <body className={`${montserrat.className} min-h-screen flex flex-col`}>
         <Navbar />
         <main className="flex-grow">
           {children}
