@@ -16,7 +16,7 @@ export default function CommunityPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Nuestra <span className="text-cimientos-600">Comunidad</span>
+              Nuestra <span className="text-cimientos-600">comunidad</span>
             </h1>
             <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed mb-12">
               Una red multidisciplinar de investigadores/as comprometidos/as con la transformación 
@@ -91,7 +91,7 @@ export default function CommunityPage() {
                 <h3 className="font-semibold text-gray-900 mb-2">Requisitos:</h3>
                 <ul className="text-gray-700 space-y-1 text-sm">
                   <li>• Formación, investigación o trabajo con políticas públicas, programas o prácticas basadas en la evidencia en disciplinas relacionadas con la primera infancia en Colombia</li>
-                  <li>• Estar en etapas iniciales o medias de tu trayectoria profesional o investigativa, con menos de 25 años de experiencia</li>
+                  <li>• Estar en etapas iniciales o medias de tu trayectoria profesional o investigativa, habiendo terminado estudios de maestría o doctorado máximo hace 7 años</li>
                   <li>• Participación con asistencia mensual a las reuniones del Colectivo, aportando de manera activa a los proyectos, productos y a la consolidación de la red</li>
                   <li>• Compromiso con la equidad y justicia social</li>
                   <li>• Interés en trabajo colaborativo e interdisciplinario</li>

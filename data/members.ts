@@ -4,11 +4,11 @@ export const members: Member[] = [
   {
     id: '1',
     name: 'Ana María Restrepo-Sáenz',
-    role: 'Estudiante de Maestría / Investigadora',
+    role: 'Estudiante de PhD',
     affiliation: 'University of Oxford',
     location: 'Oxford, Inglaterra',
     interests: ['Crisis humanitarias', 'Migración forzada', 'Crianza', 'Bienestar cuidadores', 'Primeros 1,000 días'],
-    bio: 'Investigadora en crisis humanitarias, migración forzada y bienestar de cuidadores.',
+    bio: 'Estudiante de PhD en University of Oxford, enfocada en desarrollo infantil temprano, crianza y bienestar de cuidadores en crisis humanitaria.',
     imageUrl: '/members/ana-restrepo.jpg',
     email: 'ana.restreposaenz@spi.ox.ac.uk',
     website: 'https://linkedin.com/in/anarestreposaenz'
