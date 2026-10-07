@@ -1,6 +1,6 @@
 'use client'
 
-import { FileText, Calendar, Users, ExternalLink, Download } from 'lucide-react'
+import { FileText, Calendar, Users, ExternalLink } from 'lucide-react'
 
 export interface Publication {
   id: string
@@ -25,41 +25,36 @@ const PublicationCard = ({ publication }: PublicationCardProps) => {
         return {
           label: 'Nota de Política Pública',
           icon: FileText,
-          bgColor: 'bg-cimientos-100',
-          textColor: 'text-cimientos-700',
-          iconColor: 'text-cimientos-600'
+          accentColor: 'bg-brand-cyan',
+          badgeColor: 'bg-brand-cyan/20'
         }
       case 'opinion':
         return {
           label: 'Columna de Opinión',
           icon: FileText,
-          bgColor: 'bg-primary-100',
-          textColor: 'text-primary-700',
-          iconColor: 'text-primary-600'
+          accentColor: 'bg-brand-yellow',
+          badgeColor: 'bg-brand-yellow/30'
         }
       case 'research':
         return {
           label: 'Investigación',
           icon: FileText,
-          bgColor: 'bg-accent-100',
-          textColor: 'text-accent-700',
-          iconColor: 'text-accent-600'
+          accentColor: 'bg-brand-pink',
+          badgeColor: 'bg-brand-pink/20'
         }
       case 'position':
         return {
           label: 'Documento de Posicionamiento',
           icon: FileText,
-          bgColor: 'bg-gray-100',
-          textColor: 'text-gray-700',
-          iconColor: 'text-gray-600'
+          accentColor: 'bg-brand-brown',
+          badgeColor: 'bg-brand-brown/10'
         }
       default:
         return {
           label: 'Publicación',
           icon: FileText,
-          bgColor: 'bg-gray-100',
-          textColor: 'text-gray-700',
-          iconColor: 'text-gray-600'
+          accentColor: 'bg-brand-brown',
+          badgeColor: 'bg-brand-brown/10'
         }
     }
   }
@@ -68,38 +63,39 @@ const PublicationCard = ({ publication }: PublicationCardProps) => {
   const TypeIcon = typeConfig.icon
 
   return (
-    <div className="bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden hover:shadow-xl transition-shadow duration-300">
+    <div className="bg-white rounded-xl border border-brand-brown/10 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
+      <div className={`h-1.5 ${typeConfig.accentColor}`} />
       <div className="p-6">
         {/* Header with type and date */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center space-x-2">
-            <div className={`w-8 h-8 ${typeConfig.bgColor} rounded-lg flex items-center justify-center`}>
-              <TypeIcon className={`w-4 h-4 ${typeConfig.iconColor}`} />
+            <div className={`w-8 h-8 ${typeConfig.badgeColor} rounded-lg flex items-center justify-center`}>
+              <TypeIcon className="w-4 h-4" />
             </div>
-            <span className={`text-sm font-medium ${typeConfig.textColor}`}>
+            <span className="text-sm font-semibold">
               {typeConfig.label}
             </span>
           </div>
-          <div className="flex items-center space-x-1 text-gray-500">
+          <div className="flex items-center space-x-1 text-brand-brown/80">
             <Calendar className="w-4 h-4" />
             <span className="text-sm">{publication.date}</span>
           </div>
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-gray-900 mb-3">
+        <h3 className="text-xl font-bold mb-3">
           {publication.title}
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3 leading-relaxed">
+        <p className="text-brand-brown/80 text-sm mb-4 line-clamp-3 leading-relaxed">
           {publication.description}
         </p>
 
         {/* Authors */}
         <div className="flex items-center space-x-2 mb-4">
-          <Users className="w-4 h-4 text-gray-400" />
-          <p className="text-sm text-gray-600">
+          <Users className="w-4 h-4 text-brand-brown/50 shrink-0" />
+          <p className="text-sm text-brand-brown/80">
             {publication.authors.join(', ')}
           </p>
         </div>
@@ -110,7 +106,7 @@ const PublicationCard = ({ publication }: PublicationCardProps) => {
             {publication.tags.map((tag, index) => (
               <span
                 key={index}
-                className="px-2 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-md"
+                className="px-2.5 py-1 bg-brand-brown/5 text-brand-brown/80 text-xs font-medium rounded-full"
               >
                 {tag}
               </span>
@@ -119,13 +115,13 @@ const PublicationCard = ({ publication }: PublicationCardProps) => {
         )}
 
         {/* Actions */}
-        <div className="flex space-x-3 pt-4 border-t border-gray-100">
+        <div className="flex space-x-3 pt-4 border-t border-brand-brown/10">
           {publication.externalUrl && (
             <a
               href={publication.externalUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 px-4 py-2 border border-gray-300 text-gray-700 text-sm font-medium rounded-lg hover:bg-gray-50 transition-colors duration-200"
+              className="flex items-center space-x-2 px-4 py-2 border border-brand-brown/20 text-brand-brown text-sm font-semibold rounded-full hover:bg-brand-cyan/15 transition-colors duration-200"
             >
               <ExternalLink className="w-4 h-4" />
               <span>Ver online</span>

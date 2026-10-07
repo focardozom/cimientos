@@ -6,7 +6,7 @@ Sitio web oficial del Colectivo de investigación multidisciplinar sobre innovac
 
 - **Diseño Moderno y Responsive**: Interfaz limpia adaptable a todos los dispositivos
 - **Navegación Intuitiva**: Menú principal con acceso fácil a todas las secciones
-- **Colores Suaves**: Paleta de colores inspirada en niñez y transformación social
+- **Identidad Visual**: Colores, tipografías, logos y tejido chumbe del brandbook de CIMIENTOS
 - **Componentes Reutilizables**: Arquitectura modular para fácil mantenimiento
 
 ## 📄 Páginas Principales
@@ -37,7 +37,7 @@ Sitio web oficial del Colectivo de investigación multidisciplinar sobre innovac
 - **Lenguaje**: TypeScript
 - **Estilos**: Tailwind CSS
 - **Iconos**: Lucide React
-- **Tipografía**: Inter (Google Fonts)
+- **Tipografía**: Montserrat y Fresh Mango (archivos locales vía `next/font`)
 
 ## 🚀 Instalación y Desarrollo
 
@@ -76,15 +76,39 @@ npm start
 npm run lint
 ```
 
-## 🎨 Paleta de Colores
+## 🎨 Identidad Visual
 
-### Colores Principales
-- **CIMIENTOS Blue**: #0ea5e9 (azul principal)
-- **Primary Orange**: #f1761c (naranja cálido)
-- **Accent Green**: #22c55e (verde natural)
+El sitio sigue el brandbook de CIMIENTOS. La carpeta `BRANDBOOK_CIMIENTOS/` está en `.gitignore`; los recursos que usa la web viven en `public/brand/`.
 
-### Variaciones
-Cada color principal tiene variaciones del 50 al 900 para diferentes usos y contrastes.
+### Colores
+Definidos en `tailwind.config.js` como `brand-*` (por ejemplo `bg-brand-cyan` o `text-brand-brown`).
+
+| Token | Hex | Tipo |
+|---|---|---|
+| `brand-cyan` | `#41c0f0` | Primario |
+| `brand-yellow` | `#fcd300` | Primario |
+| `brand-pink` | `#ff7bac` | Primario |
+| `brand-brown` | `#603813` | Primario (color de texto del sitio) |
+| `brand-navy` | `#14387f` | Secundario |
+| `brand-orange` | `#ff9e5c` | Secundario |
+| `brand-magenta` | `#f2308d` | Secundario |
+| `brand-gray` | `#7c7c7b` | Secundario |
+
+Los secundarios son para datos adicionales y gráficos; el brandbook pide no abusar de su uso.
+
+Para que los textos se lean bien, el texto va en marrón sobre fondos claros, o en blanco sobre marrón. El blanco sobre cian o rosa y el amarillo sobre blanco se reservan para logos, íconos y titulares grandes.
+
+### Tipografía
+- **Montserrat** (`font-sans`): familia principal, para todo el texto.
+- **Fresh Mango** (`font-display`): solo para algunos titulares y textos destacados. Tiene un único peso, así que no se combina con `font-bold`.
+
+### Recursos gráficos
+- `public/brand/logo-horizontal-color.svg`: logo principal (navbar).
+- `public/brand/logo-horizontal-blanco.svg`: logo en negativo para fondos de color (footer).
+- `public/brand/logo-vertical-color.svg`: versión vertical, para avatares y espacios estrechos.
+- `public/brand/tejido.svg`: tejido chumbe del logo, recortado para repetirse sin cortes.
+- `components/BrandStripe.tsx`: franja del logo (línea cian, tejido y línea rosa).
+- `components/PageHeader.tsx`: encabezado de las páginas interiores.
 
 ## 📁 Estructura del Proyecto
 
@@ -170,7 +194,7 @@ Para agregar nuevos eventos:
 ## 🔧 Personalización
 
 ### Cambiar Colores
-Modifica los colores en `tailwind.config.js` en la sección `theme.extend.colors`.
+Los colores de marca están en `tailwind.config.js`, en `theme.extend.colors.brand`. Cualquier cambio debe seguir el brandbook.
 
 ### Agregar Nuevas Páginas
 1. Crea una nueva carpeta en `app/`

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import PublicationCard, { Publication } from '@/components/PublicationCard'
+import PageHeader from '@/components/PageHeader'
 
 export default function PublicationsPage() {
   const [publications, setPublications] = useState<Publication[]>([])
@@ -17,22 +18,14 @@ export default function PublicationsPage() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="gradient-bg py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Publicaciones
-            </h1>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              Accede a nuestras investigaciones, notas de política pública y documentos de posicionamiento
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader
+        accent="cyan"
+        title="Publicaciones"
+        description="Accede a nuestras investigaciones, notas de política pública y documentos de posicionamiento"
+      />
 
       {/* Content Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-brand-yellow/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
