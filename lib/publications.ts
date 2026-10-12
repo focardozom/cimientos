@@ -2,6 +2,7 @@ import { Publication } from '@/components/PublicationCard'
 
 const ZOTERO_GROUP_ID = '6116204'
 const ZOTERO_API_BASE = 'https://api.zotero.org'
+const FEATURED_TAG = 'destacado'
 
 interface ZoteroCreator {
   creatorType: string
@@ -30,6 +31,9 @@ interface ZoteroItem {
     issue?: string
     pages?: string
     publisher?: string
+    reportType?: string
+    reportNumber?: string
+    institution?: string
   }
 }
 
@@ -67,6 +71,12 @@ function formatAuthors(creators: ZoteroCreator[]): string[] {
     .map((c) => `${c.lastName}, ${c.firstName}`)
 }
 
+function formatSource(data: ZoteroItem['data']): string | undefined {
+  if (data.publicationTitle) return data.publicationTitle
+  const series = [data.reportType, data.reportNumber].filter(Boolean).join(' ')
+  return [series, data.institution].filter(Boolean).join(' · ') || undefined
+}
+
 function determinePublicationType(
   itemType: string,
   tags: string[]
@@ -90,7 +100,9 @@ export async function getPublications(): Promise<Publication[]> {
 
   return items.map((item) => {
     const { data } = item
-    const tags = data.tags.map((t) => t.tag)
+    const allTags = data.tags.map((t) => t.tag)
+    const isFeaturedTag = (tag: string) => tag.toLowerCase() === FEATURED_TAG
+    const tags = allTags.filter((tag) => !isFeaturedTag(tag))
     const type = determinePublicationType(data.itemType, tags)
 
     const externalUrl = data.url || (data.DOI ? `https://doi.org/${data.DOI}` : undefined)
@@ -105,6 +117,8 @@ export async function getPublications(): Promise<Publication[]> {
       downloadUrl: data.DOI ? `https://doi.org/${data.DOI}` : undefined,
       externalUrl,
       tags,
+      source: formatSource(data),
+      featured: allTags.some(isFeaturedTag),
     }
   })
 }
