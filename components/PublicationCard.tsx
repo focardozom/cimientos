@@ -12,6 +12,8 @@ export interface Publication {
   downloadUrl?: string
   externalUrl?: string
   tags: string[]
+  source?: string
+  featured?: boolean
 }
 
 interface PublicationCardProps {
